@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    overflow: hidden; 
+    background-color: #1a1a1a; 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    color: white;
+    -webkit-font-smoothing: antialiased; 
+}
+
+
+canvas {
+    display: block;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; 
+    outline: none; 
+}
+
+
+.portfolio-ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 3rem; 
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    
+    z-index: 10; 
+    
+
+    pointer-events: none; 
+    user-select: none; 
+}
+
+
+.brand h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 5px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.5); 
+}
+
+.brand .role {
+    font-size: 0.8rem;
+    color: #ffaa00; 
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: block;
+}
+
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem; 
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7); 
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    
+    pointer-events: auto; 
+    cursor: pointer;
+}
+
+.menu a:hover {
+    color: white;
+    transform: translateY(-2px); 
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.cta-button {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 24px;
+    border-radius: 50px;
+    backdrop-filter: blur(4px); 
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: #1a1a1a !important;
+    border-color: white;
+}
+
+
+.hero-text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    max-width: 300px;
+    z-index: 5;
+    pointer-events: none; 
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.hero-text h2 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+#loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-family: monospace;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: white;
+    
+    z-index: 99; 
+    pointer-events: none;
+    transition: opacity 0.5s ease; 
+}
+
+
+@media (max-width: 768px) {
+    
+    
+    .portfolio-ui {
+        flex-direction: column; 
+        align-items: center;    
+        gap: 1.5rem;            
+        padding: 1.5rem;        
+    }
+
+   
+    .menu {
+        gap: 1.2rem; 
+        width: 100%;
+        justify-content: center; 
+        flex-wrap: wrap; 
+    }
+    
+    .menu a {
+        font-size: 0.85rem; 
+    }
+
+    
+    .cta-button {
+        padding: 6px 16px;
+    }
+
+    
+    .hero-text {
+        left: 50%;
+        transform: translateX(-50%); 
+        width: 90%; 
+        text-align: center; 
+        bottom: 30px;
+    }
+    
+    .hero-text h2 {
+        font-size: 0.9rem; 
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Portoflio 1</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav class="portfolio-ui">
+        <div class="brand">
+            <h1>PEDRO <span class="role">TECH ARTIST</span></h1>
+        </div>
+        <ul class="menu">
+            <li><a href="https://github.com/xpedrojfloresx">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/pedro-flores-dev/">LinkedIn</a></li>
+            <li><a href="mailto:pflores0213@gmail.com" class="cta-button">Contactar</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-text">
+        <h2>Interactive 3D Experience</h2>
+        <p>Explora el modelo arrastrando el mouse.</p>
+    </div>
+
+    <div id="loader">Cargando experiencia...</div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
